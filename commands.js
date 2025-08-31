@@ -1,23 +1,11 @@
 const { REST, Routes } = require('discord.js');
-require('dotenv').config(); // load .env variables
+require('dotenv').config(); 
 
 const commands = [
   {
     name: 'ping',
     description: 'Replies with Pong!',
-  },
-  {
-    name: 'chat',
-    description: 'Ask ChatGPT about Discord!',
-    options: [
-      {
-        name: 'question',
-        type: 3, // STRING
-        description: 'Your question for ChatGPT',
-        required: true,
-      },
-    ],
-  },
+  }
 ];
 
 const rest = new REST({ version: '10' }).setToken(process.env.DISCORD_TOKEN);
